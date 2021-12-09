@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-family: 'Ubuntu' , sans-serif;
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    background: url(images/bg.png) no-repeat center center/cover;
+    position: relative;
+}
+.main .nav-bar {
+    width: 80%;
+    height: 15%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo img {
+    width: 150px;
+}
+.btn {
+    display: block;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background-color: transparent;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    transition: all .5s linear;
+}
+.info {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+.info h1 {
+    color :#fff;
+    font-size: 70px;
+    margin: 5px 0 20px 0;
+}
+.info .btn {
+    width: 150px;
+}
+.btn:hover {
+    background-color: #ff8577;
+}
+.lat-bar {
+    width: 50px;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(#ffb297,#d87777);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.lat-bar .menu {
+    display: block;
+    width: 30px;
+    margin: 30px auto;
+}
+.sm {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.sm img , .help img{
+    width: 25px;
+    cursor: pointer;
+    margin: 5px 0;
+}
+.help {
+    position: absolute;
+    bottom: 30px;
+}
+.balloon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 0;
+}
+.balloon img {
+    width: 30px;
+    opacity: 0;
+    animation: balloon 5s linear infinite;
+}
+.balloon img:nth-child(1) {
+    animation-delay: 2s;
+    width: 25px;
+}
+.balloon img:nth-child(2) {
+    animation-delay: 3s;
+    width: 20px;
+}
+.balloon img:nth-child(3) {
+    animation-delay: 1s;
+    width: 25px;
+}
+.balloon img:nth-child(4) {
+    animation-delay: 2s;
+    width: 30px;
+}
+.balloon img:nth-child(5) {
+    animation-delay: 3.5s;
+    width: 18px;
+}
+.balloon img:nth-child(6) {
+    animation-delay: 0s;
+    width: 25px;
+}
+.balloon img:nth-child(7) {
+    animation-delay: 2.5s;
+    width: 35px;
+}
+@keyframes balloon {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: .6;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-80vh);
+    }
+}
