@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles.css">
+    <title>Neumorphism Clock</title>
+</head>
+<body>
+    <div class="clock">
+        <div class="center--hr"></div>
+        <div class="center--hr2"></div>
+        <div class="indicators">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="sec--hand">
+            <div class="sec"></div>
+        </div>
+        <div class="min--hand">
+            <div class="min"></div>
+        </div>
+        <div class="hr--hand">
+            <div class="hr"></div>
+        </div>
+    </div>
+    <div class="clock--num"></div>
+    <script>
+        const sec = document.querySelector('.sec');
+        const min = document.querySelector('.min');
+        const hr = document.querySelector('.hr')
+        const clockNum = document.querySelector('.clock--num')
+        setInterval(function() {
+            let time = new Date();
+            let seconds = time.getSeconds();
+            let minutes = time.getMinutes();
+            let hours = time.getHours();
+            let dayNight = 'AM';
+            sec.style.transform = `rotate(${seconds * 6}deg)`;
+            min.style.transform = `rotate(${minutes * 6}deg)`;
+            hr.style.transform = `rotate(${hours * 30 + (minutes/2)}deg)`;
+
+            if(hours > 12) {
+                dayNight = 'PM';
+                hours = hours -12;
+            }
+            if(seconds <10) {
+                seconds = '0' + seconds;
+            }
+            if(minutes < 10) {
+                minutes = '0' + minutes;
+            }
+            if(hours < 10) {
+                hours = '0' +hours;
+            }
+
+            clockNum.textContent = hours + ':' + minutes + ':' + seconds + ' ' + dayNight;
+        })
+    </script>
+</body>
+</html>
