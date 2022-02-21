@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html , body {
+    font-family: 'Lato' , sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+}
+body {
+    height: 100vh;
+    background-color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sign-in-form {
+    width: 1140px;
+    height: 500px;
+    background-image: url(img/bg.jpg);
+    background-size: 100%;
+    background-position: center;
+    border-radius: 10px;
+    position: relative;
+}
+.form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 4rem;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px 0 0 10px;
+    clip-path: polygon(0 0, 55% 0, 40% 100%, 0 100%);
+}
+.section--title {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    background-image: linear-gradient(to right, #C46317, #B22818);
+  -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: .2rem;
+    margin:0 0 3rem 11rem;
+}
+.form--group {
+    margin-bottom: 3rem;
+}
+.form--input {
+    font-size: 1.5rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rbga(#fff, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 33%;
+    transition: all .5s; 
+}
+.form--input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); 
+}
+.form--input:focus:invalid {
+      border-bottom: 3px solid #ff7730; 
+}
+::placeholder {
+      color: #999; 
+}
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #B22818;
+    color: #fff;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer; 
+}
+.forgot--pass {
+    margin-bottom: 3rem;
+}
+.form--group p {
+    margin-left: 9rem;
+    font-size: 1.5rem;
+}
+.link {
+    font-family: inherit;
+    text-decoration: none;
+    color: #C46317;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
